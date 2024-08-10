@@ -38,7 +38,7 @@ body {
     top: 0;
     left: 0;
     background: var(--main-color);
-    padding: 10px 9%;
+    padding: 10px 26.8vh;
     z-index: 1000;
 
     .container {
@@ -103,7 +103,7 @@ body {
     }
     
     .home-content {
-        width: 80%;
+        width: 66%;
         position: relative;
         margin: 26vh auto;
         
@@ -166,7 +166,7 @@ body {
         .stat-block {
             background-color: var(--bg-color-1);
             text-align: center;
-            width: 10%;
+            width: 21vh;
             height: 10vh;
             display: flex;
             gap: 1rem;
@@ -174,7 +174,6 @@ body {
             justify-content: center;
             align-items: center;
             font-size: 1.2rem;
-            border-radius: 1rem;
 
             .numbers {
                 color: var(--main-color);
@@ -563,7 +562,7 @@ body {
     justify-content: start;
     align-items: center;
     gap: 5rem;
-    min-height: 100vh;
+    min-height: 75vh;
 
     .padding {
         width: 100%;
@@ -653,6 +652,40 @@ body {
                     padding-bottom: 4rem;
                 }
             }
+        }
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--main-color);
+    padding: 10px 26.8vh;
+    
+    .logo {
+        cursor: default;
+        height: 50px;
+
+        img {
+            height: 50px;
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40rem;
+        padding: 2vh;
+
+        h3 {
+            font-size: 1.7rem;
+            font-weight: 400;
+        }
+
+        li {
+            line-height: 2.7rem;
+            list-style: none;
         }
     }
 }
