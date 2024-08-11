@@ -1,3 +1,14 @@
+window.addEventListener("scroll", (event) => {
+    const header = document.querySelector(".header");
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 70) { 
+        header.style.backgroundColor = "#355592";
+    } else {
+        header.style.backgroundColor = "";
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.button-group button').forEach(button => {
         button.addEventListener('click', function() {
