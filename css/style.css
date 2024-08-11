@@ -243,6 +243,52 @@ body {
             }
         }
 
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15rem;
+            padding: 4rem;
+
+            button {
+                background-color: var(--main-color);
+                color: var(--text-color-1);
+                font-size: 1.7rem;
+                font-weight: 600;
+                padding: 0.5rem 2rem;
+                border-radius: 5px;
+                position: relative;
+                transition: all 0.3s;
+            }
+
+            button::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid transparent;
+                transition: all 0.3s;
+            }
+            
+            button.active {
+                background-color: var(--main-color-2);
+                box-shadow: 1px 1px 6px var(--main-color-2);
+            }
+            
+            button.active::after {
+                border-top-color: var(--main-color-2);
+            }
+
+            button:hover {
+                background-color: var(--main-color-2);
+                box-shadow: 1px 1px 6px var(--main-color-2);
+            }
+        }
     }
 
     .bmi {
