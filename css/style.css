@@ -77,6 +77,42 @@ body {
                 cursor: pointer;
             }
         }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        padding: 10px 2rem;
+
+        .navbar {
+            display: none;
+            flex-direction: column;
+            background: var(--main-color);
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            text-align: center;
+            padding: 1rem 0;
+
+            a {
+                padding: 1rem 0;
+                font-size: 1.2rem;
+            }
+        }
+
+        .navbar.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block !important;
+        }
     }
 }
 
@@ -951,6 +987,20 @@ footer {
         li {
             line-height: 2.7rem;
             list-style: none;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 10px 2rem;
+
+        .logo {
+            height: 100px;
+
+            img {
+                height: 100px;
+            }
         }
     }
 }

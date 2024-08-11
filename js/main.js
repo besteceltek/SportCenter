@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    hamburger.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
 });
 
 document.querySelector('.calculate').addEventListener('click', function() {
@@ -22,6 +29,8 @@ document.querySelector('.calculate').addEventListener('click', function() {
     if (height > 0 && weight > 0) {
         let bmi = weight / ((height / 100) ** 2);
         positionTriangle(bmi);
+    } else {
+        alert("Please enter a valid value.");
     }
 });
 
