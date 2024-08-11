@@ -89,7 +89,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: 97vh;
     
     .hero-image {
         position: absolute;
@@ -163,6 +163,7 @@ body {
         text-align: center;
         gap: 6rem;
         padding-top: 3rem;
+        margin-top: ;
 
         .stat-block {
             background-color: var(--bg-color-1);
@@ -204,7 +205,7 @@ body {
 
     .padding {
         width: 100%;
-        height: 7rem;
+        height: 3rem;
         background-color: var(--bg-color-2);
     }
 
@@ -301,7 +302,7 @@ body {
             align-items: center;
             color: var(--text-color-3);
             padding: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
 
             .content {
                 display: none;
@@ -381,6 +382,7 @@ body {
         .calculator {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 1.5rem;
             width: 50%;
 
@@ -401,24 +403,30 @@ body {
                 justify-content: start;
                 align-items: center;
                 gap: 1rem;
-                margin-left: 1rem;
+                padding: 0 1rem;
 
                 input {
                     border: 1px solid var(--text-color-2);
                     border-radius: 5px;
                     padding: 0.2rem 1rem;
+                    width: 30%;
                 }
 
                 label {
                     color: var(--text-color-2);
                     font-size: 1.2rem;
                 }
+
+                .calculate {
+                    padding: 1rem 2rem;
+                }
             }
         }
 
-        .bmi-image {
+        .bmi-chart-section {
             width: 50%;
             text-align: center;
+            position: relative;
 
             h3 {
                 color: var(--text-color-2);
@@ -428,6 +436,20 @@ body {
 
             img {
                 width: 400px;
+            }
+
+            .bmi-triangle {
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 20px solid var(--main-color-2);
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: left 0.5s ease;
+                display: none;
             }
         }
     }

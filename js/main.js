@@ -13,4 +13,32 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-})
+});
+
+document.querySelector('.calculate').addEventListener('click', function() {
+    let height = parseFloat(document.getElementById('height').value);
+    let weight = parseFloat(document.getElementById('weight').value);
+    
+    if (height > 0 && weight > 0) {
+        let bmi = weight / ((height / 100) ** 2);
+        positionTriangle(bmi);
+    }
+});
+
+function positionTriangle(bmi) {
+    let bmiTriangle = document.getElementById('bmi-triangle');
+    
+    if (bmi < 18.5) {
+        bmiTriangle.style.left = '26.5%'; // Position for underweight
+    } else if (bmi >= 18.5 && bmi < 25) {
+        bmiTriangle.style.left = '38%'; // Position for normal weight
+    } else if (bmi >= 25 && bmi < 30) {
+        bmiTriangle.style.left = '50%'; // Position for overweight
+    } else if (bmi >= 30 && bmi < 35) {
+        bmiTriangle.style.left = '61.5%'; // Position for obese
+    } else {
+        bmiTriangle.style.left = '73%'; // Position for extremely obese
+    }
+
+    bmiTriangle.style.display = 'block';
+}
